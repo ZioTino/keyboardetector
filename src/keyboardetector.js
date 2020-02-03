@@ -20,7 +20,8 @@ function check() { //Actual screen height change checking code
     }
 }
 
-function addClass() { //Adds keyboard active class
+//Adds keyboard active class
+function addClass() {
     var fn = function () {
         if (initialScreenHeight !== window.innerHeight && initialScreenWidth === window.innerWidth) {
             $('#header').css('bottom', -Math.abs(initialScreenHeight - window.innerHeight));
@@ -30,7 +31,8 @@ function addClass() { //Adds keyboard active class
     $(window).one('resize', fn);
 }
 
-function removeClass() { //Removes keyboard active class
+//Removes keyboard active class
+function removeClass() {
     var fn = function () {
         setTimeout(function () {
             if (initialScreenHeight === window.innerHeight && initialScreenWidth === window.innerWidth) {
